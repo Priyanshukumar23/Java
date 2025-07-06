@@ -1,0 +1,15 @@
+//Q9.Declare one variable of each primitive type (int, float, double, char, boolean). Assign values and print them.
+public class Main{
+	public static void main(String[] args) {
+		int Integer = 5;
+		float f = 3.14f;
+		double d = 12.345678;
+		char c = 'A';
+		boolean b = true;
+		System.out.println("Integer value: " + Integer);
+        System.out.println("Float value: " + f);
+        System.out.println("Double value: " +d);
+        System.out.println("Character value: " + c);
+        System.out.println("Boolean value: " + b);
+	}
+}
