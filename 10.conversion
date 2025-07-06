@@ -1,0 +1,13 @@
+//Q10 Convert a float to an integer and print both values. Then convert an integer to a double and print both.
+public class Main{
+	public static void main(String[] args) {
+		float f = 3.14f;
+		int i = (int)f;
+		System.out.println("Float: "+f);
+		System.out.println("Int: "+i);
+		int x = 55;
+		double d = x;
+		System.out.println("Int: "+x);
+		System.out.println("Double: "+d);
+	}
+}
