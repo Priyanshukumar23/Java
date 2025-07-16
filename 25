@@ -1,0 +1,40 @@
+//25 question
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        /* ---------- Task 1 ---------- */
+        System.out.print("Enter a string: ");
+        String s = sc.nextLine();
+
+        // Length
+        int len = s.length();
+        // First & last characters (guard against empty input)
+        char first = len > 0 ? s.charAt(0) : '-';
+        char last  = len > 0 ? s.charAt(len - 1) : '-';
+        // Upper‑case version
+        String upper = s.toUpperCase();
+
+        System.out.println("\nLength          : " + len);
+        System.out.println("First character : " + first);
+        System.out.println("Last character  : " + last);
+        System.out.println("Upper‑case      : " + upper);
+
+        /* ---------- Task 2 ---------- */
+        System.out.print("\nEnter first word: ");
+        String a = sc.nextLine();
+        System.out.print("Enter second word: ");
+        String b = sc.nextLine();
+
+        // Using + operator
+        String viaPlus   = a + " " + b;
+        // Using concat()
+        String viaConcat = a.concat(" ").concat(b);
+
+        System.out.println("\nUsing +        : " + viaPlus);
+        System.out.println("Using concat() : " + viaConcat);
+    }
+}
