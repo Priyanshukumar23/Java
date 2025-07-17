@@ -1,0 +1,25 @@
+//33
+public class Outer {
+
+    // Private nested Inner class
+    private class Inner {
+        public String getMessage() {
+            return "Hello from Inner class!";
+        }
+    }
+
+    // Public method in Outer to access Inner's method
+    public String callInnerMethod() {
+        Inner inner = new Inner();          // Create Inner object
+        return inner.getMessage();          // Call Inner's method
+    }
+
+    public static void main(String[] args) {
+        // Create Outer object
+        Outer outer = new Outer();
+
+        // Call method from Outer which internally uses Inner
+        String message = outer.callInnerMethod();
+        System.out.println(message);
+    }
+}
