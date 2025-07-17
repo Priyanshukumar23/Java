@@ -1,0 +1,36 @@
+//27
+import java.util.Scanner;
+
+public class Main {
+
+    // Method to count the number of words in a sentence
+    public static int countWords(String sentence) {
+        if (sentence == null || sentence.trim().isEmpty()) {
+            return 0;
+        }
+        String[] words = sentence.trim().split("\\s+"); // handles multiple spaces
+        return words.length;
+    }
+
+    // Method to reverse a string
+    public static String reverseString(String s) {
+        StringBuilder sb = new StringBuilder(s);
+        return sb.reverse().toString();
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input sentence
+        System.out.print("Enter a sentence: ");
+        String sentence = sc.nextLine();
+
+        // Count words
+        int wordCount = countWords(sentence);
+        System.out.println("Number of words: " + wordCount);
+
+        // Reverse the sentence
+        String reversed = reverseString(sentence);
+        System.out.println("Reversed sentence: " + reversed);
+    }
+}
