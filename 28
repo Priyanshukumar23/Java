@@ -1,0 +1,72 @@
+//28
+import java.util.Scanner;
+
+public class Main {
+
+    // Enum for days of the week
+    enum Day {
+        MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
+    }
+
+    // Method to print custom message for a given day
+    public static void printMessageForDay(Day day) {
+        switch (day) {
+            case MONDAY:
+                System.out.println("Start of a new week! Stay motivated.");
+                break;
+            case TUESDAY:
+                System.out.println("Keep pushing forward!");
+                break;
+            case WEDNESDAY:
+                System.out.println("Midweek hustle!");
+                break;
+            case THURSDAY:
+                System.out.println("Almost there!");
+                break;
+            case FRIDAY:
+                System.out.println("Weekend is near. Finish strong!");
+                break;
+            case SATURDAY:
+                System.out.println("Relax and recharge!");
+                break;
+            case SUNDAY:
+                System.out.println("Plan ahead for a productive week.");
+                break;
+        }
+    }
+
+    // Method to demonstrate auto-boxing and unboxing
+    public static void demonstrateBoxing() {
+        // Auto-boxing: converting primitive to object
+        Integer num1 = 20;
+        Integer num2 = 30;
+
+        // Unboxing: converting object to primitive
+        int sum = num1 + num2;
+
+        // Double example
+        Double d = 15.5; // Auto-boxing
+        double result = d * 2; // Unboxing
+
+        System.out.println("Sum of Integer objects: " + sum);
+        System.out.println("Double value multiplied by 2: " + result);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Take day input
+        System.out.print("Enter a day (e.g., MONDAY): ");
+        String input = sc.nextLine().toUpperCase();
+
+        try {
+            Day day = Day.valueOf(input);
+            printMessageForDay(day);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Invalid day entered.");
+        }
+
+        // Demonstrate auto-boxing and unboxing
+        demonstrateBoxing();
+    }
+}
